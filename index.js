@@ -6,6 +6,7 @@ const NodeHue = require('node-hue-api'),
 
 const _ = require('lodash');
 const moment = require('moment');
+const pino = require('pino')();
 const config = require('./config');
 
 const hue = new HueApi(config.bridgeHost, config.username);
@@ -61,12 +62,13 @@ function stateChecker(id, state) {
     }
 }
 
+pino.info('Huesaver watching light: ', config.lightName);
 setInterval(() => {
     return getLightState()
         .then((lightState) => {
             return stateChecker(memory.lightId, lightState.state)
         })
         .catch((error) => {
-            console.log('An error occurred: ', error);	
+            pino.error(error, 'An error occurred');
     });
 }, TIMEOUT)

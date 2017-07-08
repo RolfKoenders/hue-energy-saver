@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "node index.js"
+    "start": "node index.js"
   },
   "author": "Rolf Koenders <@rolfkoenders>",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "dotenv": "^4.0.0",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
-    "node-hue-api": "^2.4.2"
+    "node-hue-api": "^2.4.2",
+    "pino": "^4.6.0"
   }
 }
