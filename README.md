@@ -1,6 +1,7 @@
 
 # Hue Energy Saver
 Do you have a light you sometimes forget to switch off? This simple utility will turn them off for you!
+At this moment its not configurable after how many minutes the light will be switched off. Currently its set to 5 minutes. 
 
 ## Run
 Run the script with node.
